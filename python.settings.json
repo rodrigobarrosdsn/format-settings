@@ -6,11 +6,17 @@
     ],
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit",
-      "source.fixAll": "explicit"
+      "source.organizeImports": true,
+      "source.fixAll": true
     },
     "[python]": {
       "editor.defaultFormatter": "ms-python.black-formatter",
       "editor.formatOnSave": true
-    }
+    },
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+      "--max-line-length=88", // Match Black's default line length
+      "--ignore=E203,W503" // Compatibility with Black
+    ]
   }
